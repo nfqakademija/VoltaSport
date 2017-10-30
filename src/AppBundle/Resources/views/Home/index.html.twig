@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Homepage - {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    {{ parent() }}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-weight: 100;
+            font-family: 'Lato';
+            text-align: center;
+        }
+
+        .title {
+            margin: 20px auto;
+            text-align: center;
+            font-size: 96px;
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+
+        }
+
+        a {
+            font-size: 20pt;
+            font-weight: 600;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="title">VoltaSport</div>
+    <div class="subtitle">The best food supplement</div>
+    <a href="{{ path('app_facebook_connect') }}" class="link"> Login with Facebook </a>
+{% endblock %}
