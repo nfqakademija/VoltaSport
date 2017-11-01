@@ -5,44 +5,23 @@
 {% block stylesheets %}
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     {{ parent() }}
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-weight: 100;
-            font-family: 'Lato';
-            text-align: center;
-        }
-
-        .title {
-            margin: 20px auto;
-            text-align: center;
-            font-size: 96px;
-        }
-
-        .subtitle {
-            margin-bottom: 40px;
-            text-align: center;
-            font-size: 48px;
-            font-weight: 700;
-
-        }
-
-        a {
-            font-size: 20pt;
-            font-weight: 600;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
-    </style>
 {% endblock %}
 
 {% block body %}
-    <div class="title">VoltaSport</div>
-    <div class="subtitle">The best food supplement</div>
-    <a href="{{ path('app_facebook_connect') }}" class="link"> Login with Facebook </a>
+    {#<div class="title">VoltaSport</div>#}
+    {#<div class="subtitle">The best food supplement</div>#}
+    {#<a href="{{ path('app_facebook_connect') }}" class="linktest"> Login with Facebook </a>#}
+    <div class="landing" id="landing">
+        <div class="container">
+            <div class="title col-md-8 col-md-offset-2 col-xs-12">
+                <h1>VoltaSport</h1>
+            </div>
+            <div class="landing-citation col-md-8 col-md-offset-2 col-xs-12">
+                <p>Aukščiausios kokybės maisto papildas, gaminamas iš aukščiausios rūšies medžiagų, tinkantis tiek mėgejams, tiek profesionalams.</p>
+            </div>
+            <div class="div-about-button col-md-12 col-xs-12" >
+                <a class="about-button" href="{{ path('app_facebook_connect') }}">Prisijungti</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

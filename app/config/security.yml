@@ -14,9 +14,10 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
+#bcrypt
         main:
             anonymous: ~
+#            refferer
             # activate different ways to authenticate
 
             # http_basic: ~
@@ -29,3 +30,4 @@ security:
                     - 'facebook_authenticator'
             logout:
                 path: /logout
+#access control
