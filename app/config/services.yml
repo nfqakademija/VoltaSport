@@ -3,3 +3,6 @@
 parameters:
 
 services:
+    facebook_authenticator:
+        class: AppBundle\Security\FacebookAuthenticator
+        autowire: true
