@@ -17,6 +17,7 @@
 /web/js
 /web/fonts
 /node_modules
+/bin/*
 .env
 /.idea
 npm-debug.log
