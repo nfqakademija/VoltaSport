@@ -6,15 +6,13 @@ security:
     providers:
         in_memory:
             memory: ~
-        voltasport_users:
-            entity: { class: AppBundle\Entity\User, property: email }
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-#bcrypt
+
         main:
             anonymous: ~
 #            refferer
@@ -25,9 +23,3 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
-            guard:
-                authenticators:
-                    - 'facebook_authenticator'
-            logout:
-                path: /logout
-#access control
