@@ -1,7 +1,7 @@
-set :application, 'kickstart'
+set :application, 'voltasport'
 set :repo_url, '#'
 
-set :deploy_to, '/home/kickstart/'
+set :deploy_to, '/home/voltasport/'
 
 set :archive_cache, true
 set :branch, 'master'
