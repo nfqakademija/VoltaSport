@@ -2,23 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}{{ "My project" }}{% endblock %}</title>
+    <title>{% block title %}{{ "VoltaSport" }}{% endblock %}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico')}}">
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     {% endblock %}
     {% block canonical_meta %}{% endblock %}
 </head>
 <body>
-<div class="container">
-    {% block container %}
-        {% block header %}
-            {% include "::inc/header.html.twig" %}
-        {% endblock %}
-        {% block body %}{% endblock %}
+{% block container %}
+    {% block header %}
+        {% include "::inc/header.html.twig" %}
     {% endblock %}
-</div>
+    {% block body %}{% endblock %}
+{% endblock %}
 {% block footer %}
     {% include "::inc/footer.html.twig" %}
 {% endblock %}

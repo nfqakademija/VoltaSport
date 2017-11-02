@@ -5,22 +5,21 @@
 {% block stylesheets %}
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     {{ parent() }}
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-weight: 100;
-            font-family: 'Lato';
-        }
-
-        .title {
-            margin: 20px auto;
-            text-align: center;
-            font-size: 96px;
-        }
-    </style>
 {% endblock %}
 
 {% block body %}
-    <div class="title">NFQ Akademija</div>
+    <div class="landing" id="landing">
+        <div class="container">
+            <div class="title col-md-8 col-md-offset-2 col-xs-12">
+                <h1>VoltaSport</h1>
+            </div>
+            <div class="landing-citation col-md-8 col-md-offset-2 col-xs-12">
+                <p>Aukščiausios kokybės maisto papildas, gaminamas iš aukščiausios rūšies medžiagų, tinkantis tiek mėgejams, tiek profesionalams.</p>
+            </div>
+            <div class="div-about-button col-md-12 col-xs-12" >
+                <a class="about-button" href="#"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                    Prisijungti</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
