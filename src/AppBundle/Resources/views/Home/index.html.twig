@@ -72,4 +72,35 @@
             </div>
         </div>
     </div>
+
+    <div class="footer" id="kontaktai">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3> Kontaktai </h3>
+                    <ul>
+                        <li> <a href="https://www.facebook.com/voltasport"><i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; VoltaSport</a> </li>
+                        <li> <a href="tel:+3700000000"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +370 00 000 000</a></li>
+                        <li> <a href="mailto:voltasport@mail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp; voltasport@mail.com</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $('#myNavBar').addClass('transparentNav');
+                } else {
+                    $('#myNavBar').removeClass('transparentNav');
+                }
+            });
+        });
+    </script>
 {% endblock %}

@@ -120,6 +120,40 @@
   border-radius: 50%;
 }
 
+/* Footeris */
+
+.footer {
+  background: #414f69;
+  height: auto;
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.footer h3 {
+  border-bottom: 1px solid #BAC1C8;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 20px 0 10px;
+}
+.footer ul {
+  font-size: 15px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  color: #F5F5F5;
+}
+.footer ul li a {
+  padding: 0 0 5px 0;
+  display: block;
+}
+.footer a {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
 /* Navbaras */
 
 .wrapper {
@@ -149,4 +183,10 @@
 .navbar a:hover {
   opacity: 1;
   transition: all 300ms ease-in-out;
+}
+
+.transparentNav {
+  background-color: #44536D !important;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
