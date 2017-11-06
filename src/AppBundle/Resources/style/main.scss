@@ -70,6 +70,56 @@
   color: #fff;
 }
 
+/* Apie */
+
+.content {
+  background-color: #fff;
+  text-align: center;
+  min-height: 100%;
+  position: relative;
+  padding: 20px 0 20px;
+}
+
+.fa-circle-thin {
+  color: #44536D;
+}
+
+.content p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.about-info {
+  margin-top: 40px;
+}
+
+.content h2 {
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content-hr {
+  width: 10%;
+  background-color: gray;
+  height: 1px;
+  border-color : transparent;
+}
+
+.content-hr-lg {
+  width: 50%;
+  background-color: gray;
+  height: 1px;
+  border-color : transparent;
+}
+
+.content-icon {
+  border: 0.5px solid #414f69;
+  border-radius: 50%;
+}
+
 /* Navbaras */
 
 .wrapper {
