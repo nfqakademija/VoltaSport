@@ -17,9 +17,20 @@
                 <p>Aukščiausios kokybės maisto papildas, gaminamas iš aukščiausios rūšies medžiagų, tinkantis tiek mėgejams, tiek profesionalams.</p>
             </div>
 
-            <div class="div-about-button col-md-12 col-xs-12" >
-                <a class="about-button" href="#">Plačiau</a>
-            </div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <div class="user-info col-md-8 col-md-offset-2 col-xs-12">
+                    <p>Prisijungęs kaip: {{ app.user.name }}</p>
+                </div>
+
+                <div class="div-about-button col-md-12 col-xs-12" >
+                    <a class="about-button" href="{{ path('security_logout') }}">Atsijungti</a>
+                </div>
+            {% else %}
+                <div class="div-about-button col-md-12 col-xs-12" >
+                    <a class="about-button" href="{{ path('connect_facebook') }}"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                        Prisijungti</a>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
