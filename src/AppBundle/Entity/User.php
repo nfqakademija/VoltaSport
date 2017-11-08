@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * User
  *
@@ -38,6 +39,25 @@ class User implements UserInterface
      * @ORM\Column(name="facebook_id", type="string", length=255)
      */
     private $facebookId;
+    /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
+    /**
+     * @ORM\Column(name="facebook_photo", type="string", nullable=true)
+     */
+    private $facebookPhoto;
+    /**
+     * @ORM\Column(name="facebook_token", type="string")
+     */
+    private $facebookToken;
     /**
      * Get id
      *
@@ -110,6 +130,21 @@ class User implements UserInterface
     {
         return $this->facebookId;
     }
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
     public function getRoles()
     {
         return ['ROLE_USER'];
@@ -129,5 +164,37 @@ class User implements UserInterface
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFacebookToken()
+    {
+        return $this->facebookToken;
+    }
+
+    /**
+     * @param mixed $facebookToken
+     */
+    public function setFacebookToken($facebookToken)
+    {
+        $this->facebookToken = $facebookToken;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFacebookPhoto()
+    {
+        return $this->facebookPhoto;
+    }
+
+    /**
+     * @param mixed $facebookPhoto
+     */
+    public function setFacebookPhoto($facebookPhoto)
+    {
+        $this->facebookPhoto = $facebookPhoto;
     }
 }
