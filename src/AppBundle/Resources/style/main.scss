@@ -190,3 +190,15 @@
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
+
+/* Kita */
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
