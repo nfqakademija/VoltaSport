@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Security;
+namespace AppBundle\Service\Security;
 
 use AppBundle\Entity\User;
 use KnpU\OAuth2ClientBundle\Security\Authenticator\SocialAuthenticator;

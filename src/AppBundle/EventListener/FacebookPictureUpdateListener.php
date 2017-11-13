@@ -5,7 +5,6 @@ namespace AppBundle\EventListener;
 use Doctrine\ORM\EntityManagerInterface;
 use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
-use AppBundle\Entity\User;
 
 class FacebookPictureUpdateListener
 {
@@ -26,8 +25,7 @@ class FacebookPictureUpdateListener
         $longLivedToken = $provider->getLongLivedAccessToken($token);
         $facebookUser = $client->fetchUserFromToken($longLivedToken);
 
-        $user = $this->em->getRepository(User::class)
-            ->findOneBy(['facebookId' => $facebookUser->getId()]);
+        $user = $event->getAuthenticationToken()->getUser();
         $user->setFacebookPhoto($facebookUser->getPictureUrl());
         $this->em->flush();
     }
