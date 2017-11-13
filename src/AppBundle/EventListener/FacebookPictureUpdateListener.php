@@ -19,13 +19,9 @@ class FacebookPictureUpdateListener
 
     public function onLoginSuccess(InteractiveLoginEvent $event)
     {
-        $token = $event->getAuthenticationToken()->getUser()->getFacebookToken();
-        $client = $this->clientRegistry->getClient('facebook_main');
-        $provider = $client->getOAuth2Provider();
-        $longLivedToken = $provider->getLongLivedAccessToken($token);
-        $facebookUser = $client->fetchUserFromToken($longLivedToken);
-
         $user = $event->getAuthenticationToken()->getUser();
+        $client = $this->clientRegistry->getClient('facebook_main');
+        $facebookUser = $client->fetchUserFromToken($user->getFacebookToken());
         $user->setFacebookPhoto($facebookUser->getPictureUrl());
         $this->em->flush();
     }
