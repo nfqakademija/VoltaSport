@@ -27,6 +27,12 @@
   margin: 20px auto;
 }
 
+@media(max-width:768px){
+  .title h1 {
+    font-size: 3em;
+  }
+}
+
 .landing-citation p {
   color: #ffffff;
   font-weight: 300;
@@ -156,45 +162,63 @@
 
 /* Navbaras */
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 1% 2.5%;
+.nav-info-text {
+  text-align: center;
 }
 
-.navbar-default {
-  background-color:transparent !important;
-  border-color:transparent;
-  background-image:none;
-  box-shadow:none;
+.navbar.navbar-inverse {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-links {
   text-transform: uppercase;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  margin-bottom: 0px !important;
-  border: none !important;
+}
+
+#login-dp{
+  padding: 14px 14px 0;
+  overflow:hidden;
+  background-color: #222;
+  color: #fff;
+}
+
+#login-dp .social-buttons{
+  margin:12px 0
+}
+
+#login-dp .social-buttons a{
+  width: 100%;
+}
+
+.btn-fb{
+  color: #fff;
+  background-color:#3b5998;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-fb:hover{
+  color: #fff;
+  background-color:#496ebc;
+  transition: all 300ms ease-in-out;
+}
+
+@media(max-width:768px){
+  #login-dp{
+    background-color: #222;
+    color: #fff;
+  }
 }
 
 .navbar a {
-  color: #fff !important;
-  opacity: 0.7;
   transition: all 300ms ease-in-out;
 }
 
 .navbar a:hover {
-  opacity: 1;
   transition: all 300ms ease-in-out;
 }
 
-.transparentNav {
-  background-color: #44536D !important;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-/* Kita */
-
 .profile-userpic img {
   float: none;
-  margin: 0 auto 30px;
+  margin: 0 auto 15px;
   border-radius: 50%;
 }
