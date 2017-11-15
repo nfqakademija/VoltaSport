@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Service\Security;
+namespace AppBundle\Service;
 
 use AppBundle\Entity\User;
 use KnpU\OAuth2ClientBundle\Security\Authenticator\SocialAuthenticator;
@@ -56,6 +56,7 @@ class FacebookAuthenticator extends SocialAuthenticator {
         $user->setEmail($facebookUser->getEmail());
         $user->setName($facebookUser->getName());
         $user->setFacebookId($facebookUser->getId());
+        $user->setRoles(['ROLE_USER']);
         $user->setFacebookToken($token);
         $this->em->persist($user);
         $this->em->flush();

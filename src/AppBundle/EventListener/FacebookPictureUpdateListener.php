@@ -20,7 +20,6 @@ class FacebookPictureUpdateListener
     public function onLoginSuccess(InteractiveLoginEvent $event)
     {
         $user = $event->getAuthenticationToken()->getUser();
-
         $client = $this->clientRegistry->getClient('facebook_main');
         $provider = $client->getOAuth2Provider();
         $longLivedToken = $provider->getLongLivedAccessToken($user->getFacebookToken());

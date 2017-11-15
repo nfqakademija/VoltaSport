@@ -40,9 +40,14 @@ class User implements UserInterface
      */
     private $facebookId;
     /**
+     * @ORM\Column(name="roles", type="json_array")
+     */
+    private $roles = [];
+    /**
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
+
     private $createdAt;
 
     /**
@@ -130,6 +135,18 @@ class User implements UserInterface
     {
         return $this->facebookId;
     }
+    public function getRoles()
+    {
+        $roles = $this->roles;
+        if (!in_array('ROLE_USER', $roles)) {
+            $roles[] = 'ROLE_USER';
+        }
+        return $roles;
+    }
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
+    }
     /**
      * @return \DateTime
      */
@@ -144,10 +161,6 @@ class User implements UserInterface
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-    public function getRoles()
-    {
-        return ['ROLE_USER'];
     }
     public function getPassword()
     {
