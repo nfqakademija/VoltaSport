@@ -90,6 +90,14 @@
   color: #fff;
 }
 
+@media (min-width: 768px) {
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .fa-circle-thin {
   color: #44536D;
 }
