@@ -4,80 +4,30 @@
 
 {% block stylesheets %}
     {{ parent() }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 {% endblock %}
 
 {% block body %}
     <div class="landing" id="landing">
         <div class="container">
             <div class="title col-md-8 col-md-offset-2 col-xs-12">
-                <h1>VoltaSport</h1>
+                <h1 class="wow fadeInUp">VoltaSport</h1>
             </div>
             <div class="landing-citation col-md-8 col-md-offset-2 col-xs-12">
-                <p>Aukščiausios kokybės maisto papildas, gaminamas iš aukščiausios rūšies medžiagų, tinkantis tiek mėgėjams, tiek profesionalams. Mes Jums siūlome galimybę susidaryti unikalų maisto papildą pasirenkant sudedamąsias dalis ir jų kiekį pagal Jūsų poreikį, taip gaunant Jums tobulai tinkantį maisto papildą.</p>
+                <p class="wow fadeInUp" data-wow-delay="0.5s">Aukščiausios kokybės maisto papildas, gaminamas iš aukščiausios rūšies medžiagų, tinkantis tiek mėgėjams, tiek profesionalams. Mes Jums siūlome galimybę susidaryti unikalų maisto papildą pasirenkant sudedamąsias dalis ir jų kiekį pagal Jūsų poreikį, taip gaunant Jums tobulai tinkantį maisto papildą.</p>
             </div>
 
-            <div class="div-about-button col-md-12 col-xs-12" >
+            <div class="div-about-button col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="1.2s" >
                 <a class="about-button" href="#">Plačiau</a>
             </div>
         </div>
     </div>
-
-    {#<div class="content" id="apie-mus">#}
-        {#<div class="container">#}
-            {#<div class="col-md-12">#}
-                {#<hr class="content-hr-lg"/>#}
-                {#<h2 class=>Apie mus</h2>#}
-                {#<hr class="content-hr-lg"/>#}
-                {#<div class="about-info">#}
-                    {#<div class="col-md-4">#}
-                        {#<span class="fa-stack fa-4x">#}
-                            {#<i class="fa fa-circle-thin fa-stack-2x"></i>#}
-                            {#<i class="fa fa-heart fa-stack-1x"></i>#}
-                        {#</span>#}
-                        {#<h1 class=>Kokybė</h1>#}
-                        {#<hr class="content-hr"/>#}
-                        {#<p class=>Šiame maisto papilde naudojamos tik aukščiausios rūšies medžiagos, nežalingos  Jūsų sveikatai.</p>#}
-                    {#</div>#}
-                    {#<div class="col-md-4">#}
-                        {#<span class="fa-stack fa-4x">#}
-                            {#<i class="fa fa-circle-thin fa-stack-2x"></i>#}
-                            {#<i class="fa fa-truck fa-stack-1x"></i>#}
-                        {#</span>#}
-                        {#<h1>Greitas pristatymas</h1>#}
-                        {#<hr class="content-hr"/>#}
-                        {#<p>Greitas pristatymas Jums patogiu būdu.</p>#}
-                    {#</div>#}
-                    {#<div class="col-md-4">#}
-                        {#<span class="fa-stack fa-4x">#}
-                            {#<i class="fa fa-circle-thin fa-stack-2x"></i>#}
-                            {#<i class="fa fa-eur fa-stack-1x"></i>#}
-                        {#</span>#}
-                        {#<h1>Kaina</h1>#}
-                        {#<hr class="content-hr"/>#}
-                        {#<p>Puikus kainos ir kokybės santykis.</p>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}
-
-    {#<div class="footer" id="kontaktai">#}
-        {#<div class="container">#}
-            {#<div class="row">#}
-                {#<div class="col-md-4">#}
-                    {#<h3> Kontaktai </h3>#}
-                    {#<ul>#}
-                        {#<li> <a href="https://www.facebook.com/voltasport"><i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; VoltaSport</a> </li>#}
-                        {#<li> <a href="tel:+3700000000"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +370 00 000 000</a></li>#}
-                        {#<li> <a href="mailto:voltasport@mail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp; voltasport@mail.com</a> </li>#}
-                    {#</ul>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}
-
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 {% endblock %}
