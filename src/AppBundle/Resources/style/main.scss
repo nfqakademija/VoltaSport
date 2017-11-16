@@ -78,28 +78,27 @@
 
 /* Apie */
 
-.content {
+.about {
   background-color: #fff;
-  text-align: center;
   min-height: 100%;
-  position: relative;
-  padding: 20px 0 20px;
+  padding: 80px 0 60px;
+  text-align: center;
 }
 
 .fa-circle-thin {
   color: #44536D;
 }
 
-.content p {
+.about p {
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .about-info {
-  margin-top: 40px;
+  margin: 40px 0 40px;
 }
 
-.content h2 {
+.about h2 {
   color: #666666;
   text-transform: uppercase;
   font-size: 40px;
@@ -124,6 +123,33 @@
 .content-icon {
   border: 0.5px solid #414f69;
   border-radius: 50%;
+}
+
+.order-button:hover {
+  background-color: #44536D;
+  opacity: 0.95;
+}
+
+.div-order-button a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  border: 0.5px solid #222;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.div-order-button a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.order-info {
+  margin-top: 50px;
 }
 
 /* Footeris */
