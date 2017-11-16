@@ -79,10 +79,15 @@
 /* Apie */
 
 .about {
-  background-color: #fff;
-  min-height: 100%;
-  padding: 80px 0 60px;
+  background-image: url('/images/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 80px 0 80px;
   text-align: center;
+  color: #fff;
 }
 
 .fa-circle-thin {
@@ -99,7 +104,6 @@
 }
 
 .about h2 {
-  color: #666666;
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 600;
@@ -107,15 +111,8 @@
 }
 
 .content-hr {
-  width: 10%;
-  background-color: gray;
-  height: 1px;
-  border-color : transparent;
-}
-
-.content-hr-lg {
-  width: 50%;
-  background-color: gray;
+  width: 25%;
+  background-color: #fff;
   height: 1px;
   border-color : transparent;
 }
@@ -131,13 +128,13 @@
 }
 
 .div-order-button a {
-  color: #222;
+  color: #fff;
   text-decoration: none;
   font-weight: 300;
   font-size: 0.9em;
   text-transform: uppercase;
   padding: 15px 20px;
-  border: 0.5px solid #222;
+  border: 0.5px solid #fff;
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -150,40 +147,6 @@
 
 .order-info {
   margin-top: 50px;
-}
-
-/* Footeris */
-
-.footer {
-  background: #414f69;
-  height: auto;
-  padding-bottom: 20px;
-  position: relative;
-  width: 100%;
-}
-
-.footer h3 {
-  border-bottom: 1px solid #BAC1C8;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  padding: 20px 0 10px;
-}
-.footer ul {
-  font-size: 15px;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-  color: #F5F5F5;
-}
-.footer ul li a {
-  padding: 0 0 5px 0;
-  display: block;
-}
-.footer a {
-  color: #F5F5F5;
-  text-decoration: none;
 }
 
 /* Navbaras */
@@ -206,6 +169,7 @@
   overflow:hidden;
   background-color: #222;
   color: #fff;
+  opacity: 8;
 }
 
 #login-dp .social-buttons{
@@ -247,4 +211,27 @@
   float: none;
   margin: 0 auto 15px;
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar.navbar-inverse {
+    opacity: 0.8;
+  }
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+  opacity: 0.8;
 }

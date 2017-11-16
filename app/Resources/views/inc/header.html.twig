@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ path('about') }}" class="navbar-links">Apie</a></li>
-                <li><a href="#" class="navbar-links">Užsakyti</a></li>
+                <li><a href="{{ path('order') }}" class="navbar-links">Užsakyti</a></li>
                 <li><a href="#contacts" class="navbar-links">Kontaktai</a></li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     <li class="dropdown">
