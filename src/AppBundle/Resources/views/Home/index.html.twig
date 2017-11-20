@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block body %}
+
     <div class="landing" id="landing">
         <div class="container">
             <div class="title col-md-8 col-md-offset-2 col-xs-12">
@@ -18,7 +19,136 @@
             </div>
 
             <div class="div-about-button col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="1.2s" >
-                <a class="about-button" href="{{ path('about') }}">Plačiau</a>
+                <a class="about-button" href="#about">Plačiau</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <h2 class="wow fadeInUp">Kodėl VoltaSport?</h2>
+                <div class="about-info">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x wow fadeInUp" data-wow-delay="0.2s">
+                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                            <i class="fa fa-heart fa-stack-1x"></i>
+                        </span>
+                        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Kokybė</h1>
+                        <hr class="content-hr wow fadeInUp" data-wow-delay="0.6s"/>
+                        <p class="wow fadeInUp" data-wow-delay="0.8s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x wow fadeInUp" data-wow-delay="1s">
+                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                            <i class="fa fa-cart-plus fa-stack-1x"></i>
+                        </span>
+                        <h1 class="wow fadeInUp" data-wow-delay="1.2s">Sudėties pasirinkimas</h1>
+                        <hr class="content-hr wow fadeInUp" data-wow-delay="1.4s"/>
+                        <p class="wow fadeInUp" data-wow-delay="1.6s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x wow fadeInUp" data-wow-delay="1.8s">
+                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                            <i class="fa fa-eur fa-stack-1x"></i>
+                        </span>
+                        <h1 class="wow fadeInUp" data-wow-delay="2s">Kaina</h1>
+                        <hr class="content-hr wow fadeInUp" data-wow-delay="2.2s"/>
+                        <p class="wow fadeInUp" data-wow-delay="2.4s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 about-text-large">
+                    <h2 class="wow fadeInUp" data-wow-delay="2.6s">Apie produktą</h2>
+                    <p class="about-paragraph wow fadeInUp" data-wow-delay="2.8s">Suspendisse tellus ante, suscipit eu augue sed, hendrerit egestas lorem. Fusce lacinia pharetra dui, eget ultrices sapien consequat non. Quisque est velit, semper sed tellus in, mollis pharetra purus. Aliquam quis turpis mollis, imperdiet libero non, tempor urna. Cras quis mi magna. Donec fringilla ex non ligula rutrum viverra. Integer congue diam nisi, malesuada elementum ante commodo vitae. In laoreet rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce ultricies sit amet massa ac commodo. Donec eleifend arcu at scelerisque tristique. Maecenas et arcu iaculis, vulputate lacus eu, mollis ex. Etiam gravida enim a enim hendrerit, a bibendum tellus rutrum. Maecenas eget egestas elit. Maecenas convallis eros gravida magna gravida ultricies a nec lacus. Mauris accumsan nulla ex, eget finibus quam hendrerit eu. </p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="order-info">
+                    <div class="div-order-button col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="3s" >
+                        <a class="order-button" href="#order">Užsakyti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order" id="order">
+        <div class="container-fluid">
+            <div class="col-md-6 vr-divider wow fadeInDown">
+                <img class="img img-responsive wow fadeIn" data-wow-delay="2s" src="{{ asset('images/supplement.png') }}" alt="" />
+            </div>
+            <div class="col-md-6">
+                <h2 class="wow fadeInUp">Užsakymas</h2>
+                <form class="form-horizontal">
+                    <div class="form-wrapper">
+                        <div class="form-group wow fadeInLeft" data-wow-delay="0.4s">
+                            <label for="telefonas" class="col-md-2 col-md-offset-2 control-label">Telefonas*</label>
+                            <div class="col-md-5">
+                                <input class="form-control" required="true" name="telefonas" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group wow fadeInLeft" data-wow-delay="0.6s">
+                            <label for="adresas" class="col-md-2 col-md-offset-2 control-label">Adresas*</label>
+                            <div class="col-md-5">
+                                <input class="form-control" required="true" name="adresas" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group wow fadeInLeft" data-wow-delay="0.8s">
+                            <label for="miestas" class="col-md-2 col-md-offset-2 control-label">Miestas*</label>
+                            <div class="col-md-5">
+                                <input class="form-control" required="true" name="miestas" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group wow fadeInLeft" data-wow-delay="1s">
+                            <label for="elpastas" class="col-md-2 col-md-offset-2 control-label">El. paštas*</label>
+                            <div class="col-md-5">
+                                <input class="form-control" required="true" name="elpastas" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group wow fadeInLeft" data-wow-delay="1.2s">
+                            <label for="kiekis" class="col-md-2 col-md-offset-2 control-label">Kiekis*</label>
+                            <div class="col-md-5">
+                                <input class="form-control" required="true" min="1" step="1" id="kiekis" name="kiekis" type="number" value="1">
+                            </div>
+                        </div>
+                        <div class="form-group wow fadeInLeft" data-wow-delay="1.4s">
+                            <label for="suma" class="col-md-2 col-md-offset-2 control-label">Suma (Eur)</label>
+                            <div class="col-md-5">
+                                <input class="form-control" readonly="true" id="suma" name="suma" type="text" value="29.95">
+                            </div>
+                        </div>
+                        <div class="form-group wow fadeInLeft" data-wow-delay="1.6s">
+                            <label for="pristatymas" class="col-md-2 col-md-offset-2 control-label">Pristatymas</label>
+                            <div class="col-md-5">
+                                <select class="form-control" name="pristatymas">
+                                    <option value="Atsiimti artimiausiame pašto skyriuje">Atsiimti artimiausiame pašto skyriuje</option>
+                                    <option value="Pristatymas į namus">Pristatymas į namus</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-6 wow fadeInLeft form-required" data-wow-delay="1.8s">
+                            <p>* - laukeliai privalomi</p>
+                        </div>
+                    </div>
+                    <div class="div-order-button col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="2s">
+                        <button class="order-button">Užsakyti</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="kontaktai">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3> Kontaktai </h3>
+                    <ul>
+                        <li> <a href="https://www.facebook.com/voltasport"><i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; VoltaSport</a> </li>
+                        <li> <a href="tel:+3700000000"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +370 00 000 000</li></a>
+                        <li> <a href="mailto:voltasport@mail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp; voltasport@mail.com</a> </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -30,5 +160,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
         new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function()
+        {
+            $('a[href*="#"]')
+                .not('[href="#"]')
+                .not('[href="#0"]')
+                .click(function(event) {
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        &&
+                        location.hostname == this.hostname
+                    ) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top - 80
+                            }, 1000, function() {
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) {
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex','-1');
+                                    $target.focus();
+                                };
+                            });
+                        }
+                    }
+                });
+        });
     </script>
 {% endblock %}

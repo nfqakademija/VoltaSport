@@ -24,3 +24,5 @@ security:
             logout:
                 path: /logout
 
+    access_control:
+#        - { path: ^/order, roles: ROLE_USER }

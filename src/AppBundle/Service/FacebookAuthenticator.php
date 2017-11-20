@@ -12,6 +12,7 @@ use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class FacebookAuthenticator extends SocialAuthenticator {
 
@@ -85,6 +86,8 @@ class FacebookAuthenticator extends SocialAuthenticator {
 
     public function start(Request $request, AuthenticationException $authException = null)
     {
-        // TODO: Implement start() method.
+        return new RedirectResponse(
+            '/'
+        );
     }
 }
