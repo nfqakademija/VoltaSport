@@ -103,10 +103,14 @@
 .about h2 {
   text-transform: uppercase;
   font-size: 40px;
-  font-weight: 600;
   text-align: center;
   letter-spacing: 0.1em;
   padding-bottom: 10px;
+}
+
+.about h1 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .about-text-large {
@@ -233,6 +237,8 @@
   font-weight: 600;
   line-height: 27px;
   padding: 20px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .footer ul {
   font-size: 15px;
@@ -263,6 +269,7 @@
 
 .navbar-links {
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 #login-dp{
@@ -327,6 +334,11 @@
   }
 }
 
+.navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 @media (min-width: 768px) {
   .navbar.navbar-inverse {
     opacity: 0.8;
@@ -336,6 +348,15 @@
 @media (min-width: 768px) {
   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     opacity: 0.8;
+    -webkit-box-shadow: inset 2px 0px 0px 0px #fff;
+    -moz-box-shadow: inset 2px 0px 0px 0px #fff;
+    box-shadow: inset 0px 2px 0px 0px #fff;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-brand:hover {
+    transition: all 300ms ease-in-out;
     -webkit-box-shadow: inset 2px 0px 0px 0px #fff;
     -moz-box-shadow: inset 2px 0px 0px 0px #fff;
     box-shadow: inset 0px 2px 0px 0px #fff;
