@@ -29,7 +29,7 @@ class Orders
     private $orderId;
 
     /**
-     * @ORM\Column(name="price", type="decimal", precision=10, scale=6, nullable=true)
+     * @ORM\Column(name="price", type="decimal", precision=10, scale=2)
      */
     private $price;
 
