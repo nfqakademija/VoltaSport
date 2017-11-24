@@ -1,0 +1,15 @@
+AppBundle\Entity\User:
+  user_admin:
+    name: 'Evaldas Pužauskas'
+    email: 'evaldas.puz@gmail.com'
+    facebookId: '2414599508765297'
+    facebookToken: 'EAACTaEISehUBAA3ZC03HKlZBiJRZAZAiIoB6aiENvSLUFwnujhsV6e6Xd8YthNSZBA67t0H5SCbdKMZAuUPVhWynbEyTda8ZCMDgVrew0AoYlbs4nmvmI2c91ZAJZCVZB23RrZBnk6AaIZBYZBz5YQPDDEdRsQHvfgS4RtyoZD'
+    roles: '[ROLE_ADMIN]'
+
+  user{1..100}:
+    name: '<firstName()> <lastName()>'
+    email: '<safeEmail()>'
+    facebookId: '<numberBetween(1, 99999)>'
+    createdAt: '<dateTimeBetween("-3 years")>'
+    facebookToken: '<sha256()>'
+    roles: '[ROLE_USER]'
