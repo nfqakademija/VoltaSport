@@ -1,0 +1,8 @@
+AppBundle\Entity\Orders:
+  orders{1..300}:
+    orderId: '<ean8()>'
+    user: '@user*'
+    price: '<randomNumber(3)>'
+
+
+
