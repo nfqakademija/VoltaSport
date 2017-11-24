@@ -230,4 +230,12 @@ class User implements UserInterface
     {
         $this->facebookPhoto = $facebookPhoto;
     }
+
+    /**
+     * @param mixed $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
 }
