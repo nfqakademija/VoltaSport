@@ -5,6 +5,8 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * User
  *
@@ -21,33 +23,37 @@ class User implements UserInterface
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
     /**
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     private $email;
+
     /**
      * @var string
      *
      * @ORM\Column(name="facebook_id", type="string", length=255)
      */
     private $facebookId;
+
     /**
      * @ORM\Column(name="roles", type="json_array")
      */
     private $roles = [];
+
     /**
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
-
     private $createdAt;
 
     /**
@@ -55,14 +61,27 @@ class User implements UserInterface
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
+
     /**
      * @ORM\Column(name="facebook_photo", type="string", nullable=true)
      */
     private $facebookPhoto;
+
     /**
      * @ORM\Column(name="facebook_token", type="string")
      */
     private $facebookToken;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Orders", mappedBy="user")
+     */
+    private $orders;
+
+    public function __construct()
+    {
+        $this->orders = new ArrayCollection();
+    }
+
     /**
      * Get id
      *
@@ -72,6 +91,7 @@ class User implements UserInterface
     {
         return $this->id;
     }
+
     /**
      * Set name
      *
