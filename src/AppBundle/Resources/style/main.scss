@@ -277,11 +277,10 @@
   overflow:hidden;
   background-color: #222;
   color: #fff;
-  opacity: 8;
 }
 
 #login-dp .social-buttons{
-  margin:12px 0
+  margin:12px 0;
 }
 
 #login-dp .social-buttons a{
@@ -370,4 +369,11 @@
     -moz-box-shadow: inset 2px 0px 0px 0px #fff;
     box-shadow: inset 0px 2px 0px 0px #fff;
   }
+}
+
+
+/* Vartotojo užsakymai */
+
+.user-orders {
+  padding: 80px 0 80px;
 }

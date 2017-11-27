@@ -41,6 +41,11 @@ class Orders
      */
     private $user;
 
+    public function __toString()
+    {
+        return $this->getOrderId();
+    }
+
     /**
      * Get id
      *

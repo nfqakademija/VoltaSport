@@ -34,6 +34,13 @@ class User implements UserInterface
     /**
      * @var string
      *
+     * @ORM\Column(name="username", type="string", length=255)
+     */
+    private $username;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     private $email;
@@ -80,6 +87,14 @@ class User implements UserInterface
     public function __construct()
     {
         $this->orders = new ArrayCollection();
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
     }
 
     /**
@@ -190,10 +205,7 @@ class User implements UserInterface
     {
         // TODO: Implement getSalt() method.
     }
-    public function getUsername()
-    {
-        // TODO: Implement getUsername() method.
-    }
+
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
@@ -237,5 +249,29 @@ class User implements UserInterface
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrders()
+    {
+        return $this->orders;
+    }
+
+    /**
+     * @param string $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
     }
 }

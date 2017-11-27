@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
  * Class HomeController.
  *
  * @Route("/user")
+ * @internal param User $user
  */
 class UserController extends Controller
 {
@@ -18,6 +19,8 @@ class UserController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AppBundle:User:index.html.twig', []);
+        return $this->render('AppBundle:User:index.html.twig', [
+            'orders' => $this->getUser()->getOrders()
+        ]);
     }
 }

@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -92,3 +92,20 @@ stof_doctrine_extensions:
     orm:
         default:
             timestampable: true
+
+#Easyadmin
+easy_admin:
+    site_name: 'VoltaSport'
+
+    design:
+        brand_color: '#222'
+
+    entities:
+        User:
+            class: AppBundle\Entity\User
+            list:
+                sort: ['id', 'ASC']
+        Orders:
+            class: AppBundle\Entity\Orders
+            list:
+                sort: ['id', 'ASC']
