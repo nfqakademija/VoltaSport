@@ -38,7 +38,6 @@ class CreateadminuserCommand extends Command
         $user->setUsername('Evaldas Pužauskas');
         $user->setFacebookId('2414599508765297');
         $user->setRoles(['ROLE_ADMIN']);
-        $user->setFacebookToken('EAACTaEISehUBAA3ZC03HKlZBiJRZAZAiIoB6aiENvSLUFwnujhsV6e6Xd8YthNSZBA67t0H5SCbdKMZAuUPVhWynbEyTda8ZCMDgVrew0AoYlbs4nmvmI2c91ZAJZCVZB23RrZBnk6AaIZBYZBz5YQPDDEdRsQHvfgS4RtyoZD');
         $this->em->persist($user);
         $this->em->flush();
 

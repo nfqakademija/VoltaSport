@@ -75,7 +75,7 @@ class User implements UserInterface
     private $facebookPhoto;
 
     /**
-     * @ORM\Column(name="facebook_token", type="string")
+     * @ORM\Column(name="facebook_token", type="string", nullable=true)
      */
     private $facebookToken;
 
