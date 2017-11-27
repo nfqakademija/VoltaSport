@@ -75,7 +75,7 @@ class User implements UserInterface
     private $facebookPhoto;
 
     /**
-     * @ORM\Column(name="facebook_token", type="string", nullable=true)
+     * @ORM\Column(name="facebook_token", type="string")
      */
     private $facebookToken;
 
@@ -89,9 +89,6 @@ class User implements UserInterface
         $this->orders = new ArrayCollection();
     }
 
-    /**
-     * @return string
-     */
     public function __toString()
     {
         return $this->getName();
