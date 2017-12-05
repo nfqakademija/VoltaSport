@@ -44,6 +44,7 @@ class OrderController extends Controller
             $order->setUser($user);
             $order->addSupplement($supplement);
             $order->setPrice($price);
+            $order->setAdress($form->get('adress')->getData());
             $order->setStatus(0);
 
             $em->persist($supplement);

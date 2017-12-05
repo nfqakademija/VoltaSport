@@ -40,15 +40,16 @@ class OrderType extends AbstractType
                     'class' => 'selectpicker',
                 ]
             ))
-            ->add('submit', SubmitType::class, [
-                'attr' => [
-                    'class' => 'action-button',
-                    'value' => 'Užsakyti',
-                ]
-            ])->
+            ->
             add('adress', TextareaType::class, [
                 'mapped' => false,
                 'label' => 'Adresas',
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'action-button',
+                ],
+                'label' => 'Užsakyti',
             ]);
     }
 
