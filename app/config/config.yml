@@ -101,11 +101,19 @@ easy_admin:
         brand_color: '#222'
 
     entities:
-        User:
+        Users:
             class: AppBundle\Entity\User
             list:
                 sort: ['id', 'ASC']
         Orders:
-            class: AppBundle\Entity\Orders
+            class: AppBundle\Entity\Order
+            list:
+                sort: ['id', 'ASC']
+        Supplements:
+            class: AppBundle\Entity\Supplement
+            list:
+                sort: ['id', 'ASC']
+        Ingredients:
+            class: AppBundle\Entity\Ingredient
             list:
                 sort: ['id', 'ASC']

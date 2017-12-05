@@ -12,9 +12,9 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#landing" class="navbar-links">Pradžia</a></li>
                 <li><a href="#about" class="navbar-links">Apie</a></li>
-                <li><a href="#order" class="navbar-links">Užsakyti</a></li>
+                <li><a href="{{ path('new_order') }}" class="navbar-links">Užsakyti</a></li>
+                <li><a href="#katalogas" class="navbar-links">Katalogas</a></li>
                 <li><a href="#kontaktai" class="navbar-links">Kontaktai</a></li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     <li class="dropdown">

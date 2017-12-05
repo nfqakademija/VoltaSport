@@ -12,16 +12,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    {{ include('@App/_flash.html.twig') }}
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Suma</th>
+                                <th>Užsakymo Nr.</th>
+                                <th>Būsena</th>
+                                <th>Papildai</th>
+                                <th>Užs. data</th>
                             </tr>
                         </thead>
                         <tbody>
                         {% for order in orders %}
                             <tr>
-                                <td>{{ order.user }}</td>
+                                <td>{{ order.orderid }}</td>
+                                <td>{{ order.getReadableStatus(order.status) }}</td>
+                                <td>
+                                    {% for supplement in order.supplements %}
+                                        {{ supplement.name }}
+                                    {% endfor %}
+                                </td>
+                                <td>{{ order.createdAt|date("Y-m-d") }}</td>
                             </tr>
                         {% endfor %}
                         </tbody>

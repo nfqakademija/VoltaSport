@@ -27,130 +27,98 @@
     <div class="about" id="about">
         <div class="container-fluid">
             <div class="col-md-12">
-                <h2 class="wow fadeInUp">Kodėl VoltaSport?</h2>
+                <h2>Kodėl VoltaSport?</h2>
                 <div class="about-info">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x wow fadeInUp" data-wow-delay="0.2s">
+                        <span class="fa-stack fa-4x">
                             <i class="fa fa-circle-thin fa-stack-2x"></i>
                             <i class="fa fa-heart fa-stack-1x"></i>
                         </span>
-                        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Kokybė</h1>
-                        <hr class="content-hr wow fadeInUp" data-wow-delay="0.6s"/>
-                        <p class="wow fadeInUp" data-wow-delay="0.8s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
+                        <h1>Kokybė</h1>
+                        <hr class="content-hr"/>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x wow fadeInUp" data-wow-delay="1s">
+                        <span class="fa-stack fa-4x">
                             <i class="fa fa-circle-thin fa-stack-2x"></i>
                             <i class="fa fa-cart-plus fa-stack-1x"></i>
                         </span>
-                        <h1 class="wow fadeInUp" data-wow-delay="1.2s">Sudėties pasirinkimas</h1>
-                        <hr class="content-hr wow fadeInUp" data-wow-delay="1.4s"/>
-                        <p class="wow fadeInUp" data-wow-delay="1.6s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
+                        <h1>Sudėtis</h1>
+                        <hr class="content-hr"/>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x wow fadeInUp" data-wow-delay="1.8s">
+                        <span class="fa-stack fa-4x">
                             <i class="fa fa-circle-thin fa-stack-2x"></i>
                             <i class="fa fa-eur fa-stack-1x"></i>
                         </span>
-                        <h1 class="wow fadeInUp" data-wow-delay="2s">Kaina</h1>
-                        <hr class="content-hr wow fadeInUp" data-wow-delay="2.2s"/>
-                        <p class="wow fadeInUp" data-wow-delay="2.4s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
+                        <h1>Kaina</h1>
+                        <hr class="content-hr"/>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non pulvinar nibh, et commodo nulla. Nunc erat dolor, sollicitudin et.</p>
                     </div>
-                </div>
-                <div class="col-md-12 about-text-large">
-                    <h2 class="wow fadeInUp" data-wow-delay="2.6s">Apie produktą</h2>
-                    <p class="about-paragraph wow fadeInUp" data-wow-delay="2.8s">Suspendisse tellus ante, suscipit eu augue sed, hendrerit egestas lorem. Fusce lacinia pharetra dui, eget ultrices sapien consequat non. Quisque est velit, semper sed tellus in, mollis pharetra purus. Aliquam quis turpis mollis, imperdiet libero non, tempor urna. Cras quis mi magna. Donec fringilla ex non ligula rutrum viverra. Integer congue diam nisi, malesuada elementum ante commodo vitae. In laoreet rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce ultricies sit amet massa ac commodo. Donec eleifend arcu at scelerisque tristique. Maecenas et arcu iaculis, vulputate lacus eu, mollis ex. Etiam gravida enim a enim hendrerit, a bibendum tellus rutrum. Maecenas eget egestas elit. Maecenas convallis eros gravida magna gravida ultricies a nec lacus. Mauris accumsan nulla ex, eget finibus quam hendrerit eu. </p>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="order-info">
-                    <div class="div-order-button col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="3s" >
-                        <a class="order-button" href="#order">Užsakyti</a>
+                    <div class="div-order-button col-md-12 col-xs-12">
+                        <a class="order-button" href="{{ path('new_order') }}">Užsakyti</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="order" id="order">
-        <div class="container-fluid">
-            <div class="col-md-6 vr-divider wow fadeInDown">
-                <img class="img img-responsive wow fadeIn" data-wow-delay="2s" src="{{ asset('images/supplement.png') }}" alt="" />
-            </div>
-            <div class="col-md-6">
-                <h2 class="wow fadeInUp">Užsakymas</h2>
-                <form class="form-horizontal">
-                    <div class="form-wrapper">
-                        <div class="form-group wow fadeInLeft" data-wow-delay="0.4s">
-                            <label for="telefonas" class="col-md-2 col-md-offset-2 control-label">Telefonas*</label>
-                            <div class="col-md-5">
-                                <input class="form-control" required="true" name="telefonas" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group wow fadeInLeft" data-wow-delay="0.6s">
-                            <label for="adresas" class="col-md-2 col-md-offset-2 control-label">Adresas*</label>
-                            <div class="col-md-5">
-                                <input class="form-control" required="true" name="adresas" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group wow fadeInLeft" data-wow-delay="0.8s">
-                            <label for="miestas" class="col-md-2 col-md-offset-2 control-label">Miestas*</label>
-                            <div class="col-md-5">
-                                <input class="form-control" required="true" name="miestas" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group wow fadeInLeft" data-wow-delay="1s">
-                            <label for="elpastas" class="col-md-2 col-md-offset-2 control-label">El. paštas*</label>
-                            <div class="col-md-5">
-                                <input class="form-control" required="true" name="elpastas" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group wow fadeInLeft" data-wow-delay="1.2s">
-                            <label for="kiekis" class="col-md-2 col-md-offset-2 control-label">Kiekis*</label>
-                            <div class="col-md-5">
-                                <input class="form-control" required="true" min="1" step="1" id="kiekis" name="kiekis" type="number" value="1">
-                            </div>
-                        </div>
-                        <div class="form-group wow fadeInLeft" data-wow-delay="1.4s">
-                            <label for="suma" class="col-md-2 col-md-offset-2 control-label">Suma (Eur)</label>
-                            <div class="col-md-5">
-                                <input class="form-control" readonly="true" id="suma" name="suma" type="text" value="29.95">
-                            </div>
-                        </div>
-                        <div class="form-group wow fadeInLeft" data-wow-delay="1.6s">
-                            <label for="pristatymas" class="col-md-2 col-md-offset-2 control-label">Pristatymas</label>
-                            <div class="col-md-5">
-                                <select class="form-control" name="pristatymas">
-                                    <option value="Atsiimti artimiausiame pašto skyriuje">Atsiimti artimiausiame pašto skyriuje</option>
-                                    <option value="Pristatymas į namus">Pristatymas į namus</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-md-offset-6 wow fadeInLeft form-required" data-wow-delay="1.8s">
-                            <p>* - laukeliai privalomi</p>
-                        </div>
-                    </div>
-                    <div class="div-order-button col-md-12 col-xs-12 wow fadeInUp" data-wow-delay="2s">
-                        <button class="order-button">Užsakyti</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer" id="kontaktai">
+    <div class="about-product">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h3> Kontaktai </h3>
-                    <ul>
-                        <li> <a href="https://www.facebook.com/voltasport"><i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; VoltaSport</a> </li>
-                        <li> <a href="tel:+3700000000"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +370 00 000 000</a></li>
-                        <li> <a href="mailto:voltasport@mail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i>&nbsp; voltasport@mail.com</a> </li>
-                    </ul>
+                <div class="col-md-12">
+                    <h2>Apie produktą</h2>
+                    <div class="img-centered">
+                        <img class="img-centered" src="{{ asset('images/optimum-whey.png') }}" alt="">
+                    </div>
+                    <p class="about-paragraph">Suspendisse tellus ante, suscipit eu augue sed, hendrerit egestas lorem. Fusce lacinia pharetra dui, eget ultrices sapien consequat non. Quisque est velit, semper sed tellus in, mollis pharetra purus. Aliquam quis turpis mollis, imperdiet libero non, tempor urna. Cras quis mi magna. Donec fringilla ex non ligula rutrum viverra. Integer congue diam nisi, malesuada elementum ante commodo vitae. In laoreet rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce ultricies sit amet massa ac commodo. Donec eleifend arcu at scelerisque tristique. Maecenas et arcu iaculis, vulputate lacus eu, mollis ex. Etiam gravida enim a enim hendrerit, a bibendum tellus rutrum. Maecenas eget egestas elit. Maecenas convallis eros gravida magna gravida ultricies a nec lacus. Mauris accumsan nulla ex, eget finibus quam hendrerit eu. </p>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="catalog" id="katalogas">
+        <div class="container-fluid">
+        <div class="row">
+            <h2>Katalogas</h2>
+            <div id="adv_team_4_columns_carousel" class="carousel slide four_shows_one_move team_columns_carousel_wrapper" data-ride="carousel" data-interval="2000" data-pause="hover">
+                <div class="carousel-inner" role="listbox">
+                    {% for supplement in supplements %} {% if loop.index % 4 == 1 %} {% if loop.first %}
+                    <div class="item active">
+                        {% else %}
+                        <div class="item">
+                            {% endif %} {% endif %}
+                            <div class="col-xs-12 col-sm-6 col-md-3 team_columns_item_image">
+                                <img src="{{ asset('images/optimum-whey.png') }}" alt="slider 02">
+                                <div class="team_columns_item_caption">
+                                    <h4>{{ supplement.name }}</h4>
+                                    <hr>
+                                    <h5>Kaina: {{ supplement.price }} &euro;</h5>
+                                    <div class="supplement-info-wrapper">
+                                        <a href="" class="btn-supplement-info">Plačiau</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if (loop.index % 4 == 0 or loop.last) %}
+                        </div>
+                        {% endif %} {% endfor %}
+                    </div>
+                <a class="left carousel-control team_columns_carousel_control_left adv_left" href="#adv_team_4_columns_carousel" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left team_columns_carousel_control_icons" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control team_columns_carousel_control_right adv_right" href="#adv_team_4_columns_carousel" role="button" data-slide="next">
+                    <span class="fa fa-angle-right team_columns_carousel_control_icons" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
     </div>
 
 {% endblock %}

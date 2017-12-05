@@ -1,0 +1,61 @@
+{% extends "::base.html.twig" %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block title %}Užsakyti - {{ parent() }}{% endblock %}
+
+
+{% block body %}
+
+    <div class="order">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="col-md-10 col-md-offset-1">
+                    {{ form_start(form, {'attr': {'id': 'msform'}}) }}                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active">Sudėtis</li>
+                            <li>Dydis</li>
+                            <li>Adresas</li>
+                            <li>Detalės</li>
+                        </ul>
+                        <!-- fieldsets -->
+                        <fieldset>
+                            <h2 class="fs-title">Pasirinkite norimą sudėtį</h2>
+                            {{ form_row(form.ingredients) }}
+                            <input type="button" name="next" class="next action-button" value="Toliau" />
+                        </fieldset>
+                        <fieldset>
+                            <h2 class="fs-title">Pasirinkite norimą dydį</h2>
+                            {{ form_row(form.size) }}
+                            <input type="button" name="previous" class="previous action-button" value="Atgal" />
+                            <input type="button" name="next" class="next action-button" value="Toliau" />
+                        </fieldset>
+                            <fieldset>
+                                <h2 class="fs-title">Įveskite savo adresą</h2>
+                                {{ form_row(form.adress) }}
+                                <input type="button" name="previous" class="previous action-button" value="Atgal" />
+                                <input type="button" name="next" class="next action-button" value="Toliau" />
+                            </fieldset>
+                        <fieldset>
+                            <h2 class="fs-title">Užsakymo detalės</h2>
+                            <h3 class="fs-subtitle">We will never sell it</h3>
+                            <input type="button" name="previous" class="previous action-button" value="Previous" />
+                            {{ form_row(form.submit) }}
+                        </fieldset>
+                    {{ form_end(form) }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+{% endblock %}
+
+

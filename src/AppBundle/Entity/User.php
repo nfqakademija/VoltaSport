@@ -80,7 +80,7 @@ class User implements UserInterface
     private $facebookToken;
 
     /**
-     * @ORM\OneToMany(targetEntity="Orders", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="Order", mappedBy="user")
      */
     private $orders;
 
@@ -270,5 +270,21 @@ class User implements UserInterface
     public function getUsername()
     {
         return $this->username;
+    }
+
+    /**
+     * @param mixed $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @param mixed $orders
+     */
+    public function setOrders($orders)
+    {
+        $this->orders = $orders;
     }
 }

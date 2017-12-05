@@ -1,7 +1,8 @@
-AppBundle\Entity\Orders:
-  orders{1..300}:
+AppBundle\Entity\Order:
+  orders{1..100}:
     orderId: '<ean8()>'
     user: '@user*'
+    status: '1'
     price: '<randomNumber(3)>'
 
 
