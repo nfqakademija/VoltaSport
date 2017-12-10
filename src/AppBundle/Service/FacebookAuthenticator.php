@@ -14,7 +14,8 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class FacebookAuthenticator extends SocialAuthenticator {
+class FacebookAuthenticator extends SocialAuthenticator
+{
 
     private $clientRegistry;
     private $em;

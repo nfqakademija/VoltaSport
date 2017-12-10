@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 
-
 /**
  * Ingredient
  *
@@ -64,7 +63,8 @@ class Ingredient
     private $supplements;
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->supplements = new ArrayCollection();
     }
 
@@ -202,6 +202,4 @@ class Ingredient
     {
         $this->supplements = $supplements;
     }
-
 }
-

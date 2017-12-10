@@ -30,9 +30,7 @@ class CreateadminuserCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $user = new User();
-
         $user->setEmail('evaldas.puz@gmail.com');
         $user->setName('Evaldas Pužauskas');
         $user->setUsername('Evaldas Pužauskas');
@@ -41,8 +39,6 @@ class CreateadminuserCommand extends Command
         $user->setFacebookToken('EAAYf6PHdgocBAIBdKzH0OJN9ht9weCGcW2VNXKVJJqSPAuweUpwv1g2eCCxcke4ciXtg5KJOeQZAxHtWVFv9vkNKrU9nOLRWtSJ2FfnFCisF0EAXkS2oXbyaQdg8Rv331DMgyPoGClLiUMpxFkL934bRPjM0085J7ZB7wlLwZDZD');
         $this->em->persist($user);
         $this->em->flush();
-
         $output->writeln('Admin user has been created.');
     }
-
 }

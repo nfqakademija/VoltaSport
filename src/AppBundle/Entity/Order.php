@@ -77,7 +77,8 @@ class Order
     private $supplements;
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->supplements = new ArrayCollection();
     }
 
@@ -248,6 +249,4 @@ class Order
     {
         $this->adress = $adress;
     }
-
 }
-

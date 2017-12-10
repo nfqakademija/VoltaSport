@@ -6,7 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
-class FacebookController extends Controller {
+class FacebookController extends Controller
+{
     /**
      * @Route("/connect/facebook", name="connect_facebook")
      */
@@ -29,5 +30,6 @@ class FacebookController extends Controller {
      */
     public function logoutAction()
     {
+
     }
 }

@@ -70,7 +70,8 @@ class Supplement
     private $orders;
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->ingredients = new ArrayCollection();
         $this->orders = new ArrayCollection();
     }
@@ -221,4 +222,3 @@ class Supplement
         $this->size = $size;
     }
 }
-
