@@ -16,7 +16,6 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class FacebookAuthenticator extends SocialAuthenticator
 {
-
     private $clientRegistry;
     private $em;
     private $router;
@@ -30,7 +29,16 @@ class FacebookAuthenticator extends SocialAuthenticator
 
     public function getCredentials(Request $request)
     {
+        if ($request->getPathInfo() != '/connect/check') {
+            return;
+        }
         return $this->fetchAccessToken($this->getFacebookClient());
+    }
+
+    private function getFacebookClient()
+    {
+        return $this->clientRegistry
+            ->getClient('facebook_main');
     }
 
     public function getUser($credentials, UserProviderInterface $userProvider)
@@ -60,15 +68,6 @@ class FacebookAuthenticator extends SocialAuthenticator
         $this->em->flush();
 
         return $user;
-    }
-
-    /**
-     * @return FacebookClient
-     */
-    private function getFacebookClient()
-    {
-        return $this->clientRegistry
-            ->getClient('facebook_main');
     }
 
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
