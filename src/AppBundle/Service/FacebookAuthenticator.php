@@ -30,7 +30,8 @@ class FacebookAuthenticator extends SocialAuthenticator
 
     public function getCredentials(Request $request)
     {
-        if ($request->getPathInfo() != '/connect/facebook/check') {
+        if ($request->getPathInfo() != '/connect/facebook/check')
+        {
             return;
         }
 
