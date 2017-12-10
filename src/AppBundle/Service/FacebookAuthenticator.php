@@ -30,11 +30,6 @@ class FacebookAuthenticator extends SocialAuthenticator
 
     public function getCredentials(Request $request)
     {
-        if ($request->getPathInfo() != '/connect/facebook/check')
-        {
-            return;
-        }
-
         return $this->fetchAccessToken($this->getFacebookClient());
     }
 
@@ -55,7 +50,6 @@ class FacebookAuthenticator extends SocialAuthenticator
         }
 
         $user = new User();
-
         $user->setEmail($facebookUser->getEmail());
         $user->setName($facebookUser->getName());
         $user->setUsername($facebookUser->getName());
