@@ -7,7 +7,6 @@ use KnpU\OAuth2ClientBundle\Security\Authenticator\SocialAuthenticator;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\RouterInterface;
-use KnpU\OAuth2ClientBundle\Client\Provider\FacebookClient;
 use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
@@ -29,12 +28,16 @@ class FacebookAuthenticator extends SocialAuthenticator
 
     public function getCredentials(Request $request)
     {
-        if ($request->getPathInfo() != '/connect/check') {
+        if ($request->getPathInfo() != '/connect/facebook/check') {
             return;
         }
+
         return $this->fetchAccessToken($this->getFacebookClient());
     }
 
+    /**
+     * @return \KnpU\OAuth2ClientBundle\Client\OAuth2Client
+     */
     private function getFacebookClient()
     {
         return $this->clientRegistry
