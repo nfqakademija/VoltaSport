@@ -31,7 +31,6 @@ class FacebookAuthenticator extends SocialAuthenticator
         if ($request->getPathInfo() != '/connect/facebook/check') {
             return;
         }
-
         return $this->fetchAccessToken($this->getFacebookClient());
     }
 
