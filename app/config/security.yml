@@ -1,17 +1,20 @@
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/book/security.html
 security:
 
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    encoders:
+        AppBundle\Entity\User: bcrypt
+
+
     providers:
-        facebook_users:
-            entity: { class: AppBundle\Entity\User, property: name }
+
+        users:
+            entity: { class: AppBundle\Entity\User, property: email }
+
 
     role_hierarchy:
             ROLE_ADMIN:       ROLE_USER
 
+
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
@@ -19,6 +22,9 @@ security:
         main:
             anonymous: ~
 
+            form_login:
+                login_path: user_login
+                check_path: user_login
 
             guard:
                 authenticators:
@@ -30,4 +36,5 @@ security:
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/order, roles: ROLE_USER }
+        - { path: ^/user/orders, roles: ROLE_USER }
         - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

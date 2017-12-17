@@ -1,0 +1,46 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Prisijugti - {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <h2>Prisijungti</h2>
+                <div class="col-md-4 col-md-offset-4 login-panel">
+                    <form class="form" action="{{ path('user_login') }}" method="post">
+                        <div class="form-group">
+                            <label for="username">El. Paštas:</label>
+                            <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Slaptažodis:</label>
+                            <input class="form-control" type="password" id="password" name="_password" />
+                        </div>
+
+                        <div class="form-group">
+                            <p>Naujas vartotojas?<a href="{{ path('user_registration') }}"> Registracija</a></p>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn login-button" type="submit">Prisijungti</button>
+                        </div>
+                    </form>
+                    <div class="login-text">Prisijungti su</div>
+                    <div class="social-buttons">
+                        <a href="{{ path('connect_facebook') }}" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
