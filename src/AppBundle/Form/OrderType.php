@@ -21,18 +21,16 @@ class OrderType extends AbstractType
             ->add('ingredients', EntityType::class, array(
                 'class' => Ingredient::class,
                 'choice_label' => 'name',
-                'choice_attr' => function (Ingredient $ingredient, $key, $index) {
-                    return ['data-subtext' => $ingredient->getPrice() . "&euro;" ];
-                },
-                'label' => 'Sudėtis*',
+                'label' => 'Sudėtis',
                 'multiple' => 'true',
                 'attr' => [
                     'class' => 'selectpicker',
+                    'multiple' => 'multiple',
                     'title' => 'Pasirinkite..'
                 ]
             ))
             ->add('size', ChoiceType::class, array(
-                'label' => 'Dydis*',
+                'label' => 'Dydis',
                 'choices' => [
                     'Mažas (1kg)' => '1',
                     'Vidutinis (2,5kg)' => '2',
@@ -45,13 +43,13 @@ class OrderType extends AbstractType
             ->
             add('adress', TextareaType::class, [
                 'mapped' => false,
-                'label' => 'Adresas*',
+                'label' => 'Adresas',
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Užsakyti',
                 'attr' => [
-                    'class' => 'btn login-button',
-                ]
+                    'class' => 'action-button',
+                ],
+                'label' => 'Užsakyti',
             ]);
     }
 

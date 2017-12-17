@@ -1,10 +1,5 @@
 //bootstrap
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
-body {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-}
 
 /* Pagrindinis */
 
@@ -49,6 +44,16 @@ body {
   margin: 20px 0 50px;
 }
 
+.user-info p {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+  margin: 0px 0 20px;
+}
+
 .about-button:hover {
   background-color: #44536D;
   opacity: 0.95;
@@ -76,21 +81,20 @@ body {
 /* Apie */
 
 .about {
-  background: linear-gradient(#363a4d, #4c7c96);
+  background-color: white;
   min-height: 100%;
-  padding: 40px 0 70px;
+  padding: 50px 0 80px;
   text-align: center;
-  color: #fff;
+  color: #222;
 }
 
 .fa-circle-thin {
-  color: #fff;
+  color: #44536D;
 }
 
 .about p {
   padding-left: 30px;
   padding-right: 30px;
-  font-size: 16px;
 }
 
 .about-info {
@@ -99,7 +103,7 @@ body {
 
 .about h2 {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 0.1em;
   padding-bottom: 10px;
@@ -107,7 +111,6 @@ body {
 
 .about h1 {
   letter-spacing: 0.1em;
-  font-size: 30px;
   text-transform: uppercase;
 }
 
@@ -117,14 +120,12 @@ body {
 
 .about-paragraph {
   padding-top: 15px;
-  font-size: 16px;
 }
 
 .content-hr {
-  width: 50%;
-  background-color: #fff;
-  height: 0.4px;
-  opacity: 0.4;
+  width: 25%;
+  background-color: #222;
+  height: 1px;
   border-color : transparent;
 }
 
@@ -146,13 +147,13 @@ body {
 }
 
 .div-order-button a {
-  color: #fff;
+  color: #222;
   text-decoration: none;
   font-weight: 300;
   font-size: 0.9em;
   text-transform: uppercase;
   padding: 15px 20px;
-  border: 0.5px solid #fff;
+  border: 0.5px solid #222;
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -160,8 +161,7 @@ body {
 
 .div-order-button a:hover {
   text-decoration: none;
-  background: #fff;
-  color: #222;
+  color: #fff;
 }
 
 .order-info {
@@ -170,19 +170,14 @@ body {
 
 .about-product {
   padding: 40px 0 60px;
-  background-image: url('/images/background.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #222;
   color: #fff;
   text-align: center;
-  font-size: 16px;
 }
 
 .about-product h2 {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 0.1em;
   padding-bottom: 10px;
@@ -192,12 +187,18 @@ body {
 /* Užsakymas */
 
 .order {
-  background: linear-gradient(#363a4d, #4c7c96);
+  background-image: url('/images/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   height: 100%;
   padding: 100px 0 40px;
   text-align: center;
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .order h2 {
@@ -257,11 +258,10 @@ body {
 }
 
 #login-dp{
-  padding: 0px 14px 0;
+  padding: 14px 14px 0;
   overflow:hidden;
   background-color: #222;
   color: #fff;
-  text-align: center;
 }
 
 #login-dp .social-buttons{
@@ -274,7 +274,6 @@ body {
 
 .btn-fb{
   color: #fff;
-  width: 100%;
   background-color:#3b5998;
   transition: all 300ms ease-in-out;
 }
@@ -283,27 +282,6 @@ body {
   color: #fff;
   background-color:#496ebc;
   transition: all 300ms ease-in-out;
-}
-
-.btn-fb:focus{
-  color: #fff;
-  background-color:#3b5998;
-  transition: all 300ms ease-in-out;
-}
-
-.dropdown-link {
-  color: #fff;
-  font-size: 15px;
-  opacity: 0.8;
-  text-decoration: none;
-  margin: 10px 0;
-  display: block;
-}
-
-.dropdown-link:hover {
-  color: #fff;
-  opacity: 1;
-  text-decoration: none;
 }
 
 @media(max-width:768px){
@@ -325,7 +303,6 @@ body {
   float: none;
   margin: 0 auto 15px;
   border-radius: 50%;
-  padding-top: 15px;
 }
 
 @media (min-width: 768px) {
@@ -383,19 +360,130 @@ body {
 /* Vartotojo užsakymai */
 
 .user-orders {
-  background: linear-gradient(#363a4d, #4c7c96);
-  min-height: 100vh;
-  height: 100%;
-  padding: 80px 0 40px;
+  padding: 80px 0 80px;
 }
 
-.user-orders h2 {
-  font-size: 30px;
+
+/* Forma */
+
+#msform {
   text-align: center;
+  position: relative;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0;
+  position: relative;
+}
+
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2C3E50;
+  font-size: 13px;
+}
+
+#msform .action-button {
+  width: 100px;
+  background-color: transparent;
+  color: #222;
+  border: 0.5px solid #222;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-weight: 300;
+  font-family: inherit;
+  font-size: 0.9em;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  background-color: #44536D;
+  opacity: 0.95;
   color: #fff;
 }
+
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#progressbar {
+  margin-bottom: 30px;
+  margin-left: -35px;
+  overflow: hidden;
+  counter-reset: step;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 25%;
+  float: left;
+  position: relative;
+}
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index:-1;
+}
+#progressbar li:first-child:after {
+  content: none;
+}
+
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #44536D;
+  color: white;
+}
+
 
 /* Katalogas */
 
@@ -421,18 +509,18 @@ ul.thumbnails {
   width: 100%;
 }
 
-.control-box a, a:focus {
+.control-box a {
   color: #fff;
 }
 
-.control-box a:hover {
+.control-box a:hover, a:focus {
   color: #222;
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-.pager li>a, .pager li>a:focus {
+.pager li>a {
   background-color: #222;
   border-radius: 0px;
   -webkit-transition: 0.5s ease;
@@ -440,7 +528,7 @@ ul.thumbnails {
   transition: 0.5s ease;
 }
 
-.pager li>a:hover {
+.pager li>a:hover,.pager li>a:focus {
   background-color: #fff;
   border-radius: 0px;
   border: 1px solid #222;
@@ -479,18 +567,14 @@ li { list-style-type:none;}
   max-height: 100%;
 }
 
-.catalog {
-  padding-top: 40px;
-  padding-bottom: 50px;
-}
-
 .catalog h2 {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 0.1em;
   padding-bottom: 10px;
-  margin-bottom: 40px;
+  padding-top: 20px;
+  margin-bottom: 30px;
 }
 
 .btn-supplement-info {
@@ -518,22 +602,19 @@ li { list-style-type:none;}
 /* Footeris */
 
 .footer {
-  background: linear-gradient(#4c7c96, #363a4d);
+  background: #222;
   height: auto;
   position: relative;
   width: 100%;
-  text-align: center;
-}
-
-.footer-content {
-  padding-bottom: 15px;
 }
 
 .footer h3 {
+  border-bottom: 1px solid #BAC1C8;
   color: #fff;
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 27px;
-  padding: 30px 0 10px;
+  padding: 20px 0 10px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -550,12 +631,11 @@ li { list-style-type:none;}
 }
 .footer a {
   color: #F5F5F5;
-  font-size: 16px;
   text-decoration: none;
 }
 
 .footer .footer-copyright{
-  background-color: #222;
+  background-color: #383737;
   padding-top:3px;
   padding-bottom:3px;
   text-align: center;
@@ -567,98 +647,5 @@ li { list-style-type:none;}
   margin:10px;
   color: #fff;
 }
-
-/* Registracija */
-
-.registracija {
-  background: linear-gradient(#363a4d, #4c7c96);
-  min-height: 100vh;
-  height: 100%;
-  padding: 80px 0 40px;
-  text-align: center;
-  color: #fff;
-}
-
-.registracija h2 {
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-
-.login h2 {
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-
-.login {
-  background: linear-gradient(#363a4d, #4c7c96);
-  min-height: 100vh;
-  height: 100%;
-  padding: 80px 0 40px;
-  text-align: center;
-  color: #fff;
-}
-
-.login-panel {
-  background: rgba(34,34,34,0.5);
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.login-text {
-  font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.login-button, .register-button {
-  color: #fff;
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  padding: 11px 20px;
-  border: 0.5px solid #fff;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
-  border-radius: 0px;
-}
-
-.login-button:hover, .register-button:hover {
-  color: #222;
-  background: #fff;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.login-button:focus, .register-button:focus {
-  color: #fff;
-  background-color: transparent;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
-  border: 0.5px solid #fff;
-}
-
-.row.vdivide [class*='col-']:not(:last-child):after {
-  background: #e0e0e0;
-  width: 1px;
-  content: "";
-  display:block;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  right: 0;
-  min-height: 70px;
-  height: 110%;
-  opacity: 0.4;
-}
-
 
 

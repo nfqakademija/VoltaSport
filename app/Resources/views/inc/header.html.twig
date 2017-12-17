@@ -13,9 +13,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about" class="navbar-links">Apie</a></li>
+                <li><a href="{{ path('new_order') }}" class="navbar-links">Užsakyti</a></li>
                 <li><a href="#katalogas" class="navbar-links">Katalogas</a></li>
                 <li><a href="#kontaktai" class="navbar-links">Kontaktai</a></li>
-                <li><a href="{{ path('new_order') }}" class="navbar-links">Užsakyti</a></li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ app.user.name }}<span class="caret"></span></a>
@@ -23,16 +23,10 @@
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        {% if (app.user.facebookPhoto) %}
-                                            <div class="profile-userpic">
-                                                <img src="{{ app.user.facebookPhoto }}" class="img-responsive" alt="">
-                                            </div>
-                                        {% endif %}
+                                        <div class="profile-userpic">
+                                            <img src="{{ app.user.facebookPhoto }}" class="img-responsive" alt="">
+                                        </div>
                                         <div class="social-buttons">
-                                            {% if is_granted('ROLE_ADMIN') %}
-                                                <a href="{{ path('admin') }}" class="dropdown-link">Admin. skiltis</a>
-                                            {% endif %}
-                                            <a href="{{ path('user_orders') }}" class="dropdown-link">Užsakymai</a>
                                             <a href="{{ path('security_logout') }}" class="btn btn-fb">Atsijungti</a>
                                         </div>
                                     </div>
@@ -41,7 +35,21 @@
                         </ul>
                     </li>
                 {% else %}
-                    <li><a href="{{ path("user_login") }}" class="navbar-links">Prisijungti</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-links" data-toggle="dropdown">Prisijungti<span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="nav-info-text">Prisijungti su</div>
+                                        <div class="social-buttons">
+                                            <a href="{{ path('connect_facebook') }}" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 {% endif %}
             </ul>
         </div>

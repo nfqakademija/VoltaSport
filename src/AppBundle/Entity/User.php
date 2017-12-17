@@ -5,7 +5,6 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -47,20 +46,9 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=64, nullable=true)
-     */
-    private $password;
-
-    /**
-     * @Assert\NotBlank()
-     * @Assert\Length(max=4096)
-     */
-    private $plainPassword;
-
-    /**
      * @var string
      *
-     * @ORM\Column(name="facebook_id", type="string", length=255, nullable=true)
+     * @ORM\Column(name="facebook_id", type="string", length=255)
      */
     private $facebookId;
 
@@ -87,7 +75,7 @@ class User implements UserInterface
     private $facebookPhoto;
 
     /**
-     * @ORM\Column(name="facebook_token", type="string", nullable=true)
+     * @ORM\Column(name="facebook_token", type="string")
      */
     private $facebookToken;
 
@@ -206,27 +194,9 @@ class User implements UserInterface
     {
         return $this->updatedAt;
     }
-
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    public function setPlainPassword($password)
-    {
-        $this->plainPassword = $password;
-    }
-
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
     public function getPassword()
     {
-        return $this->password;
+        // TODO: Implement getPassword() method.
     }
     public function getSalt()
     {

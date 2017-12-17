@@ -22,11 +22,9 @@ class FacebookPictureUpdateListener
         $user = $event->getAuthenticationToken()->getUser();
         $client = $this->clientRegistry->getClient('facebook_main');
         $provider = $client->getOAuth2Provider();
-        if ($user->getFacebookToken()) {
-            $longLivedToken = $provider->getLongLivedAccessToken($user->getFacebookToken());
-            $facebookUser = $client->fetchUserFromToken($longLivedToken);
-            $user->setFacebookPhoto($facebookUser->getPictureUrl());
-            $this->em->flush();
-        }
+        $longLivedToken = $provider->getLongLivedAccessToken($user->getFacebookToken());
+        $facebookUser = $client->fetchUserFromToken($longLivedToken);
+        $user->setFacebookPhoto($facebookUser->getPictureUrl());
+        $this->em->flush();
     }
 }
