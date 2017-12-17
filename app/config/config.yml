@@ -105,6 +105,8 @@ easy_admin:
             class: AppBundle\Entity\User
             list:
                 sort: ['id', 'ASC']
+            form:
+                fields: ['name', 'username', 'email', 'plainPassword', roles]
         Orders:
             class: AppBundle\Entity\Order
             list:

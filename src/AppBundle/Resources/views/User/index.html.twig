@@ -9,34 +9,41 @@
 {% block body %}
 
     <div class="user-orders">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
+                <h2>Užsakymai</h2>
                 <div class="col-md-12">
-                    {{ include('@App/_flash.html.twig') }}
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>Užsakymo Nr.</th>
-                                <th>Būsena</th>
-                                <th>Papildai</th>
-                                <th>Užs. data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        {% for order in orders %}
-                            <tr>
-                                <td>{{ order.orderid }}</td>
-                                <td>{{ order.getReadableStatus(order.status) }}</td>
-                                <td>
-                                    {% for supplement in order.supplements %}
-                                        {{ supplement.name }}
-                                    {% endfor %}
-                                </td>
-                                <td>{{ order.createdAt|date("Y-m-d") }}</td>
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {{ include('@App/_flash.html.twig') }}
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Užsakovas</th>
+                                    <th>Užsakymo Nr.</th>
+                                    <th>Būsena</th>
+                                    <th>Papildai</th>
+                                    <th>Užs. data</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for order in orders %}
+                                    <tr class="{{ (order.status == 2 ? 'alert-success' : '') }}">
+                                        <td>{{ order.user }}</td>
+                                        <td>{{ order.orderid }}</td>
+                                        <td>{{ order.getReadableStatus(order.status) }}</td>
+                                        <td>
+                                            {% for supplement in order.supplements %}
+                                                {{ supplement.name }}
+                                            {% endfor %}
+                                        </td>
+                                        <td>{{ order.createdAt|date("Y-m-d") }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
