@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Order
@@ -73,6 +74,9 @@ class Order
      * Many Orders have Many Supplements.
      * @ORM\ManyToMany(targetEntity="Supplement", inversedBy="orders")
      * @ORM\JoinTable(name="orders_supplements")
+     *
+     * @Assert\NotBlank
+     *
      */
     private $supplements;
 

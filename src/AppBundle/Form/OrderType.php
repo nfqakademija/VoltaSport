@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class OrderType extends AbstractType
 {
@@ -46,6 +47,9 @@ class OrderType extends AbstractType
             add('adress', TextareaType::class, [
                 'mapped' => false,
                 'label' => 'Adresas*',
+                'constraints' => [
+                    new Assert\NotBlank(),
+                ]
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Užsakyti',

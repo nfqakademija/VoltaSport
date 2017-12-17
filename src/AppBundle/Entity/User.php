@@ -43,6 +43,9 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
+     *
+     * @Assert\NotBlank
+     * @Assert\Email
      */
     private $email;
 
@@ -54,6 +57,9 @@ class User implements UserInterface
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max=4096)
+     *
+     * @Assert\NotBlank
+     * @Assert\Email
      */
     private $plainPassword;
 

@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new KnpU\OAuth2ClientBundle\KnpUOAuth2ClientBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new JBen87\ParsleyBundle\ParsleyBundle(),
             new AppBundle\AppBundle(),
         );
 
