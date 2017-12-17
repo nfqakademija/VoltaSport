@@ -46,7 +46,6 @@ class SecurityController extends Controller
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
             $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
 
@@ -56,7 +55,7 @@ class SecurityController extends Controller
 
             $token = new UsernamePasswordToken($user, null, 'main', $user->getRoles());
             $this->get('security.token_storage')->setToken($token);
-            $this->get('session')->set('_security_main',serialize($token));
+            $this->get('session')->set('_security_main', serialize($token));
 
             return $this->redirectToRoute('homepage');
         }
